@@ -1,0 +1,114 @@
+.App {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .cabezera {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1.3125rem 0.625rem 0.625rem 0.625rem;
+
+        .form {
+            width: 28%;
+            position: relative;
+            height: 3.125rem;
+            overflow: hidden;
+
+            input {
+                width: 100%;
+                height: 100%;
+                color: #595f6e;
+                padding-top: 1.25rem;
+                border: none;
+                outline: none;
+                font-size: 1.125rem;
+            }
+
+            label {
+                position: absolute;
+                bottom: 0rem;
+                left: 0rem;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                border-bottom: 0.0625rem solid black;
+            }
+
+            label::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: -0.0625rem;
+                height: 100%;
+                width: 100%;
+                border-bottom: 0.1875rem solid #5fa8d3;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .content-name {
+                position: absolute;
+                bottom: 0.3125rem;
+                left: 0rem;
+                transition: all 0.3s ease;
+            }
+
+            input:focus+.label-name .content-name,
+            input:valid+.label-name .content-name {
+                transform: translateY(-90%);
+                font-size: 0.875rem;
+                color: #5fa8d3;
+            }
+
+            input:focus+.label-name::after,
+            input:valid+.label-name::after {
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    .spinner{
+        border: red;
+    }
+
+    .Contenido {
+        width: 100%;
+        max-width: 53.875rem;
+        padding: 1.9375rem;
+        position: relative;
+    }
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    justify-content: space-around;
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .caja {
+            width: 100%;
+            margin-bottom: 0.5625rem;
+            max-width: 12.9375rem;
+            box-shadow: 0rem 0rem 0.1875rem #c7a7a752;
+            padding: 0.5rem;
+            border-radius: 0.5625rem;
+
+            h5 {
+                margin: 0.0625rem;
+                font-size: 0.9375rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
